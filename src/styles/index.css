@@ -1,0 +1,17 @@
+/* CSS Architecture — Entry Point
+ * This file contains ONLY @import statements (G8).
+ * All styles are organized into separate files by category.
+ */
+
+/* Design Tokens */
+@import "./tokens/colors.css";
+@import "./tokens/spacing.css";
+@import "./tokens/typography.css";
+@import "./tokens/shadows.css";
+
+/* Base Reset & Global Styles */
+@import "./base/reset.css";
+@import "./base/global-base.css";
+
+/* Utilities */
+@import "./utilities.css";

@@ -1,0 +1,25 @@
+/* ========================================
+   TYPOGRAPHY TOKENS — Fluid sizes (G24)
+   Uses clamp() for fluid sizing.
+   Font pairs chosen in Phase 2.
+   ======================================== */
+:root {
+  --font-display: var(--font-plus-jakarta), system-ui, sans-serif;
+  --font-body: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+
+  /* Fluid type scale */
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  clamp(1.25rem, 2vw, 1.5rem);
+  --text-3xl:  clamp(1.5rem, 3vw, 1.875rem);
+  --text-4xl:  clamp(1.875rem, 4vw, 2.25rem);
+  --text-5xl:  clamp(2.25rem, 5vw, 3rem);
+
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+}

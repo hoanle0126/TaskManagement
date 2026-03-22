@@ -1,0 +1,20 @@
+/* ========================================
+   SPACING TOKENS — 8px Grid System (G23)
+   Multiples of 8px only.
+   ======================================== */
+:root {
+  --spacing-1: 4px;   /* micro only */
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-10: 40px;
+  --spacing-12: 48px;
+  --spacing-14: 56px;
+  --spacing-16: 64px;
+  --spacing-20: 80px;
+  --spacing-24: 96px;
+  --spacing-30: 120px;
+  --spacing-40: 160px;
+}

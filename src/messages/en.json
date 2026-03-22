@@ -1,0 +1,27 @@
+{
+  "common": {
+    "appName": "TaskFlow",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try again",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "search": "Search..."
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "myTasks": "My Tasks",
+    "inbox": "Inbox",
+    "settings": "Settings"
+  },
+  "dashboard": {
+    "greeting": "Good morning",
+    "totalTasks": "Total Tasks",
+    "completed": "Completed",
+    "inProgress": "In Progress",
+    "overdue": "Overdue"
+  }
+}

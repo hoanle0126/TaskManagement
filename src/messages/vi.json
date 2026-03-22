@@ -1,0 +1,27 @@
+{
+  "common": {
+    "appName": "TaskFlow",
+    "loading": "Đang tải...",
+    "error": "Đã xảy ra lỗi",
+    "retry": "Thử lại",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "edit": "Chỉnh sửa",
+    "create": "Tạo mới",
+    "search": "Tìm kiếm..."
+  },
+  "nav": {
+    "dashboard": "Tổng quan",
+    "myTasks": "Việc của tôi",
+    "inbox": "Hộp thư",
+    "settings": "Cài đặt"
+  },
+  "dashboard": {
+    "greeting": "Chào buổi sáng",
+    "totalTasks": "Tổng số công việc",
+    "completed": "Đã hoàn thành",
+    "inProgress": "Đang thực hiện",
+    "overdue": "Quá hạn"
+  }
+}
