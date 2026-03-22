@@ -25,10 +25,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ── Focus Ring — accessibility (G19) ── */
-:focus-visible {
+:focus-visible:not([data-slot="command-input"]) {
   outline: 2px solid var(--brand, var(--ring));
   outline-offset: 2px;
   border-radius: var(--radius-sm, 4px);
+}
+
+[data-slot="command-input"]:focus-visible {
+  outline: none;
 }
 
 /* ── Custom Scrollbar (Webkit) ── */
