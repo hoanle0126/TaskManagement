@@ -23,5 +23,17 @@
     "completed": "Đã hoàn thành",
     "inProgress": "Đang thực hiện",
     "overdue": "Quá hạn"
+  },
+  "theme": {
+    "toggleTheme": "Đổi giao diện",
+    "light": "Sáng",
+    "dark": "Tối",
+    "system": "Hệ thống",
+    "accentColor": "Màu nhấn",
+    "indigo": "Chàm",
+    "violet": "Tím",
+    "emerald": "Ngọc lục",
+    "amber": "Hổ phách",
+    "rose": "Hồng"
   }
 }

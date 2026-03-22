@@ -8,19 +8,44 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
-  min-height: 100vh;
+  /* Note: bg-background and text-foreground applied via @layer base in colors.css */
+  min-height: 100dvh;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: var(--weight-semibold, 600);
   line-height: var(--leading-tight);
 }
 
-/* Focus ring — accessibility (G19) */
+/* ── Text Selection ── */
+::selection {
+  background-color: oklch(from var(--brand) l c h / 0.25);
+  color: var(--foreground);
+}
+
+/* ── Focus Ring — accessibility (G19) ── */
 :focus-visible {
-  outline: 2px solid hsl(var(--ring));
+  outline: 2px solid var(--brand, var(--ring));
   outline-offset: 2px;
+  border-radius: var(--radius-sm, 4px);
+}
+
+/* ── Custom Scrollbar (Webkit) ── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: var(--radius-pill);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
 }

@@ -1,12 +1,43 @@
 /* ========================================
-   SHADOW TOKENS — Narrative shadows (G7)
-   Shadows with design intent.
+   SHADOW & TRANSITION TOKENS — Narrative depth (G7)
+   Every shadow has design intent — not decorative.
    ======================================== */
 :root {
-  --shadow-xs:  0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-sm:  0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --shadow-md:  0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg:  0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl:  0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --shadow-glass: 0 8px 32px 0 rgb(0 0 0 / 0.12);
+  /* ── Elevation Shadows ── */
+  --shadow-xs:    0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-sm:    0 1px 3px 0 rgb(0 0 0 / 0.10), 0 1px 2px -1px rgb(0 0 0 / 0.10);
+  --shadow-md:    0 4px 6px -1px rgb(0 0 0 / 0.10), 0 2px 4px -2px rgb(0 0 0 / 0.10);
+  --shadow-lg:    0 10px 15px -3px rgb(0 0 0 / 0.10), 0 4px 6px -4px rgb(0 0 0 / 0.10);
+  --shadow-xl:    0 20px 25px -5px rgb(0 0 0 / 0.10), 0 8px 10px -6px rgb(0 0 0 / 0.10);
+  --shadow-2xl:   0 25px 50px -12px rgb(0 0 0 / 0.25);
+
+  /* ── Glass Effect Shadow ── */
+  --shadow-glass:  0 8px 32px 0 rgb(0 0 0 / 0.12);
+
+  /* ── Inner Depth ── */
+  --shadow-inset:  inset 0 1px 3px 0 rgb(0 0 0 / 0.08);
+
+  /* ── Brand Accent Glow (uses CSS var for dynamic accent) ── */
+  --shadow-accent: 0 0 20px -4px oklch(from var(--brand) l c h / 0.35);
+  --shadow-accent-lg: 0 0 40px -8px oklch(from var(--brand) l c h / 0.25);
+
+  /* ── Transitions (G15: GPU-only) ── */
+  --transition-fast:   150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base:   250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:   450ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  /* ── Border Radius Extended ── */
+  --radius: 0.625rem;
+}
+
+/* Dark theme: deeper shadows for better contrast */
+.dark {
+  --shadow-xs:    0 1px 2px 0 rgb(0 0 0 / 0.30);
+  --shadow-sm:    0 1px 3px 0 rgb(0 0 0 / 0.40), 0 1px 2px -1px rgb(0 0 0 / 0.30);
+  --shadow-md:    0 4px 6px -1px rgb(0 0 0 / 0.40), 0 2px 4px -2px rgb(0 0 0 / 0.30);
+  --shadow-lg:    0 10px 15px -3px rgb(0 0 0 / 0.45), 0 4px 6px -4px rgb(0 0 0 / 0.35);
+  --shadow-xl:    0 20px 25px -5px rgb(0 0 0 / 0.50), 0 8px 10px -6px rgb(0 0 0 / 0.40);
+  --shadow-2xl:   0 25px 50px -12px rgb(0 0 0 / 0.60);
+  --shadow-glass: 0 8px 32px 0 rgb(0 0 0 / 0.32);
 }

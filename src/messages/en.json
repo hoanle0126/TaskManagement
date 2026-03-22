@@ -23,5 +23,17 @@
     "completed": "Completed",
     "inProgress": "In Progress",
     "overdue": "Overdue"
+  },
+  "theme": {
+    "toggleTheme": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "accentColor": "Accent color",
+    "indigo": "Indigo",
+    "violet": "Violet",
+    "emerald": "Emerald",
+    "amber": "Amber",
+    "rose": "Rose"
   }
 }

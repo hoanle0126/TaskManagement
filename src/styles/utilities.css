@@ -1,10 +1,10 @@
 /* ========================================
    UTILITY CLASSES
    Global utility helpers.
-   Populated progressively as needed.
+   All utilities follow G7 (no inline CSS) and G15 (GPU-only animations).
    ======================================== */
 
-/* Visually hidden (screen reader accessible) */
+/* ── Accessibility ── */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -15,4 +15,129 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+/* ── Glassmorphism ── */
+.glass {
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-glass);
+}
+
+.glass-dark {
+  background-color: oklch(0.12 0.01 265 / 0.7);
+  backdrop-filter: blur(20px) saturate(200%);
+  -webkit-backdrop-filter: blur(20px) saturate(200%);
+  border: 1px solid oklch(1 0 0 / 0.06);
+  box-shadow: var(--shadow-glass);
+}
+
+/* ── Interactive Surface ── */
+.surface-interactive {
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+  cursor: pointer;
+}
+
+.surface-interactive:hover {
+  background-color: var(--accent);
+}
+
+.surface-interactive:active {
+  background-color: var(--secondary);
+}
+
+/* ── Focus Ring Override ── */
+.focus-ring {
+  outline: 2px solid var(--brand, var(--ring));
+  outline-offset: 2px;
+}
+
+/* ── Text Utilities ── */
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+/* ── Layout Utilities ── */
+.center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* ── Gradient Utilities ── */
+.gradient-brand {
+  background: linear-gradient(
+    135deg,
+    oklch(from var(--brand) l c h / 0.9),
+    oklch(from var(--brand) calc(l - 0.08) calc(c + 0.02) calc(h + 20) / 0.9)
+  );
+}
+
+.gradient-surface {
+  background: linear-gradient(
+    180deg,
+    var(--surface-elevated),
+    var(--surface)
+  );
+}
+
+/* ── Animation Companion Classes (G14 — uses MOTION from lib/motion.ts) ── */
+.animate-in {
+  animation-duration: var(--transition-base);
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-out {
+  animation-duration: var(--transition-fast);
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+/* ── Brand Glow ── */
+.glow-brand {
+  box-shadow: var(--shadow-accent);
+}
+
+.glow-brand-lg {
+  box-shadow: var(--shadow-accent-lg);
+}
+
+/* ── Truncate utilities ── */
+.truncate-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.truncate-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.truncate-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
