@@ -7,13 +7,13 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
+  font-family: var(--font-source-sans), system-ui, sans-serif;
   /* Note: bg-background and text-foreground applied via @layer base in colors.css */
   min-height: 100dvh;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
+  font-family: var(--font-plus-jakarta), system-ui, sans-serif;
   font-weight: var(--weight-semibold, 600);
   line-height: var(--leading-tight);
 }

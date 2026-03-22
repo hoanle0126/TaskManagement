@@ -8,6 +8,17 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+/* ── Tailwind v4 font theme override ──────────────────────
+   Maps Tailwind utility classes (font-sans, font-mono) to
+   the exact font names loaded by next/font/google.
+   NOTE: Must use literal font names, NOT var(). next/font
+   injects --font-* as class-scoped variables, not :root,
+   so var() references inside @theme cannot resolve them. */
+@theme inline {
+  --font-sans:    "Source Sans 3", "Source Sans 3 Fallback", system-ui, sans-serif;
+  --font-mono:    "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+}
+
 /* Project design system */
 @import "../styles/tokens/colors.css";
 @import "../styles/tokens/spacing.css";

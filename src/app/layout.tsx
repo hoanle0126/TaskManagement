@@ -44,7 +44,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${sourceSans3.variable} ${plusJakartaSans.variable} ${geistMono.variable} font-sans antialiased`}
+        className={`${sourceSans3.variable} ${plusJakartaSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
         <NextIntlClientProvider messages={messages}>
