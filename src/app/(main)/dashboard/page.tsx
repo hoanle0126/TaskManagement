@@ -1,10 +1,14 @@
-import { getTranslations } from "next-intl/server";
+import Topbar from "@/components/layout/Topbar";
 
-export default async function DashboardPage() {
-  const t = await getTranslations("common");
+export default function DashboardPage() {
   return (
-    <main>
-      <h1>{t("appName")}</h1>
-    </main>
+    <div className="flex h-full flex-col">
+      <Topbar title="Dashboard" />
+      <div className="flex-1 overflow-y-auto p-6">
+        <p className="text-muted-foreground text-sm">
+          Dashboard — coming soon.
+        </p>
+      </div>
+    </div>
   );
 }
